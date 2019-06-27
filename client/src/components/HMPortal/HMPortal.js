@@ -15,7 +15,7 @@ export default class HMPortal extends React.Component {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-6 candidates">
+                    <div className="col-6">
                         <MatchingCandidates/>
                     </div>
                 </div>
