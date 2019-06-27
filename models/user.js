@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
-    name: String,
-    id: Number
+const idealCandidateSchema = new Schema({
+    major: String,
+    GPA: Number,
+    skills: [String]
 });
 
-const User = mongoose.model("User", userSchema);
+const IdealCandidate = mongoose.model("IdealCandidate", idealCandidateSchema);
 
-module.exports = User;
+module.exports = IdealCandidate;
