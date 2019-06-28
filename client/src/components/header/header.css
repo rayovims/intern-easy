@@ -3,3 +3,29 @@
     width: 100%;
     background-color: #333333;
 }
+.jumbotron{
+  margin-top: 0px;
+padding-top: 0;
+color: #FFB500;
+background-color: #644117;
+padding-bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .jumbotron{
+  padding-top: 1;
+  color: #FFB500;
+  background-color: #644117;
+  padding-bottom: 1%;
+  height: 50px;
+
+  }
+  .upsLogo {
+    //display: inline-block;
+    float: left;
+    height: 45px;
+    width: auto;
+    padding-bottom: 10px;
+    padding-right: 10px;
+  }
+}
