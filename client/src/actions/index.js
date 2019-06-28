@@ -9,3 +9,12 @@ export const getMatchingCandidates = () => async dispatch => {
     const response = await backend.get("/get/matching/candidates");
     dispatch({type: "GET_MATCHING_CANDIDATES", payload: response.data});
 }
+
+
+
+export const selectedCandidate = candidate => {
+     return {
+         type: "SELECTED_CANDIDATE", 
+         payload: candidate
+    };    
+}

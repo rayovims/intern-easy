@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from '../modals/CreateCandidateModal';
 import MatchingCandidates from '../matchingCandidates/MatchingCandidates';
 import './hmportal.css';
+import ChosenCandidates from '../chosenCandidates/ChoseCandidates';
 
 export default class HMPortal extends React.Component {
 
@@ -17,6 +18,9 @@ export default class HMPortal extends React.Component {
                 <div className="row">
                     <div className="col-6">
                         <MatchingCandidates/>
+                    </div>
+                    <div className="col-6">
+                        <ChosenCandidates/>
                     </div>
                 </div>
             </div>
