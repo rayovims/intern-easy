@@ -11,9 +11,10 @@ export default class Header extends React.Component {
         return (
             //<div className="row">
           // <div className="container-fluid">
-            <div className="jumbotron text-center">
-                    <img className ="upsLogo" src={Logo} alt="Logo" height="100vh"/>
-                    <h5 className = "h5fix"> <b>Intern Requisition Portal</b> </h5>
+            <div className ="header">
+              <header><center><img className ="upsLogo" src={Logo} alt="Logo" height="100vh"/>
+              <h5 className = "h5fix"> <b>Intern Requisition Portal</b> </h5></center> </header>
+
                 </div>
             //</div>
 //            </div>
