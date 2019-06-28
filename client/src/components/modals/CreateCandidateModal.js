@@ -87,7 +87,7 @@ class CreateCandidateModal extends React.Component {
               <hr/>
               <label>Skills</label>
               <div className="row">
-                <div className="col-10">
+                <div className="col-10" style={{padding: 0}}>
                 <input 
                 className="form-control"
                 value={this.state.skill}
@@ -124,8 +124,9 @@ class CreateCandidateModal extends React.Component {
   }
 
   const mapStateToProps = (state) => {
+    console.log(state);
     return {
-      createIdealCandidate: state.createIdealCandidateReducer
+      createIdealCandidate: state.createIdealCandidateReducer,
     }
   }
 
