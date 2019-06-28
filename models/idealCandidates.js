@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const idealCandidateSchema = new Schema({
     major: String,
-    GPA: Number,
+    GPA: String,
     skills: [String]
 });
 

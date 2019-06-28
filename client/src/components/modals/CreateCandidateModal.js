@@ -1,5 +1,7 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { createIdealCandidate } from '../../actions';
 
 class CreateCandidateModal extends React.Component {
     constructor(props, context) {
@@ -11,7 +13,7 @@ class CreateCandidateModal extends React.Component {
       this.state = {
         show: false,
         major: '',
-        gpa: '',
+        GPA: '',
         skill: '',
         skills: []
       };
@@ -23,6 +25,7 @@ class CreateCandidateModal extends React.Component {
   
     handleShow() {
       this.setState({ show: true });
+      this.setState({major: '', GPA: '', skills: []})
     }
 
     addSkills = (skill) => {
@@ -36,6 +39,21 @@ class CreateCandidateModal extends React.Component {
         )
       })
     }
+
+    handleCreateCandidate = () => {
+
+      const { major, GPA, skills} = this.state;
+
+      if (major === '' && GPA === '' && skills.length === 0) {
+        alert("Please enter at least one field");
+      } else {
+        const data = {
+          major, GPA, skills
+        }
+        this.props.createIdealCandidate(data);
+        this.handleClose();
+      }
+    }
   
     render() {
       return (
@@ -45,26 +63,26 @@ class CreateCandidateModal extends React.Component {
           onClick={this.handleShow}
           className="btn"
           >
-            {this.props.btnName}
+            Create
           </button>
   
           <Modal show={this.state.show} onHide={this.handleClose}>
             <Modal.Header closeButton>
-              <Modal.Title style={{textAlign: 'center'}}>{this.props.title}</Modal.Title>
+              <Modal.Title style={{textAlign: 'center'}}>Create Candidate</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <label>Major</label>
               <input
               className="form-control"
               value={this.state.major}
-              onChange={(e) => this.setState({major: e.target.value.toIn})}
+              onChange={(e) => this.setState({major: e.target.value})}
               />
               <hr/>
               <label>GPA</label>
               <input
               className="form-control"
-              value={this.state.gpa}
-              onChange={(e) => this.setState({gpa: e.target.value})}
+              value={this.state.GPA}
+              onChange={(e) => this.setState({GPA: e.target.value})}
               />
               <hr/>
               <label>Skills</label>
@@ -92,7 +110,7 @@ class CreateCandidateModal extends React.Component {
             <Modal.Footer>
                 <div className="col-12 text-left" style={{paddingLeft: 0}}>
                   <button 
-                  onClick={this.handleClose}
+                  onClick={this.handleCreateCandidate}
                   className="btn"
                   >
                   Create Candidate
@@ -105,4 +123,10 @@ class CreateCandidateModal extends React.Component {
     }
   }
 
-  export default CreateCandidateModal;
+  const mapStateToProps = (state) => {
+    return {
+      createIdealCandidate: state.createIdealCandidateReducer
+    }
+  }
+
+  export default connect(mapStateToProps, {createIdealCandidate})(CreateCandidateModal);
