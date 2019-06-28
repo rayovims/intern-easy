@@ -18,3 +18,8 @@ export const selectedCandidate = candidate => {
          payload: candidate
     };    
 }
+
+export const authenticate = user => async dispatch => {
+    const response = await backend.post("/login", user);
+    dispatch({type: "LOGIN", payload: response.data})
+}

@@ -28,8 +28,18 @@ const selectedCandidateReducer = (state = [], action) => {
     }
 } 
 
+const authenticateReducer = (state = null, action) => {
+    switch (action.type) {
+        case "LOGIN":
+            return action.payload;
+        default: 
+            return state;
+    }
+}
+
 export default combineReducers({
     createIdealCandidateReducer,
     getMatchingCandidatesReducer,
-    selectedCandidateReducer
+    selectedCandidateReducer,
+    authenticateReducer
 })
