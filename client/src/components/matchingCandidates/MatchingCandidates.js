@@ -13,11 +13,9 @@ class MatchingCandidates extends React.Component {
   }
 
   componentDidUpdate() {
-    // console.log(this.state.selected);
   }
 
   addToSelected = (candidate) => {
-    // console.log(candidate);
     this.props.selectedCandidate(candidate);
 
   }

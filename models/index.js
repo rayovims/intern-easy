@@ -1,4 +1,5 @@
 module.exports = {
     IdealCandidates: require('./idealCandidates'),
-    Users: require('./users')
+    Users: require('./users'),
+    Members: require('./members')
 }

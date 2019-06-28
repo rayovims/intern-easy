@@ -7,8 +7,17 @@
     color: grey;
 }
 
+.list-group-item:hover {
+    cursor: pointer;
+}
+
+#btn-fix {
+    padding-top: 18px;
+}
+
 .create {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .candidates {
