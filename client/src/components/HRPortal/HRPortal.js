@@ -38,6 +38,7 @@ export default class HRPortal extends React.Component {
          <a href="#">Leandro Cervantes</a>
        </div>
      </div>
+  <iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiZWMxY2ZlNzQtOWY3Yi00YjFhLTg3MzEtYzI1Nzc5Njk2M2YxIiwidCI6IjY0MDc0NjM2LTFiZjQtNDAyNi05MmVmLTBkMjc5MWQ3ZjkzMSIsImMiOjJ9" frameborder="0" allowFullScreen="true"></iframe>
      </center>
    </div>
  );
