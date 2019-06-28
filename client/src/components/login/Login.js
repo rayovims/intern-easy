@@ -38,8 +38,8 @@ class Login extends React.Component {
       <div>
         <div className="container">
           <div className="row">
-            <div className="col-3"></div>
-            <div className="col-6">
+            <div className="col-4"></div>
+            <div className="col-4">
               <label>
                 Username
               </label>
@@ -53,8 +53,8 @@ class Login extends React.Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-3"></div>
-            <div className="col-6">
+            <div className="col-4"></div>
+            <div className="col-4">
               <label>
                 Password
               </label>
@@ -69,12 +69,13 @@ class Login extends React.Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-3"></div>
-            <div className="col-6" style={{paddingTop: '10px'}}>
+            <div className="col-4"></div>
+            <div className="col-4" style={{paddingTop: '10px'}}>
               <button 
                 className="btn"
                 onClick={(e) => {this.login(e)}}
                 disabled={this.state.isLoading}
+                style={{width: "100%"}}
                 >
                   Login
                 </button>
