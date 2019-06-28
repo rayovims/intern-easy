@@ -9,9 +9,9 @@ export default class HRPortal extends React.Component {
      <div className="dropdown">
        <button className="dropbtn">Trisha Jacobson</button>
        <div className="dropdown-content">
-         <a href="#">Corrine Henson</a>
-         <a href="#">Josie Reed</a>
-         <a href="#">Roger Key</a>
+         <a href="http://localhost:3000/hrportal0">Corrine Henson</a>
+         <a href="http://localhost:3000/hrportal0">Josie Reed</a>
+         <a href="http://localhost:3000/hrportal0">Roger Key</a>
        </div>
      </div>
      <div className="dropdown">

@@ -4,6 +4,7 @@ import { Route, BrowserRouter, Redirect } from "react-router-dom";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import HMPortal from "../components/HMPortal/HMPortal";
+import HRPortal0 from "../components/HRPortal/HRPortal0";
 import HRPortal from "../components/HRPortal/HRPortal";
 import Login from "../components/login/Login";
 
@@ -18,7 +19,7 @@ class App extends React.Component {
   componentDidUpdate() {
     this.handleRoutes();
   }
-  
+
   handleRoutes = () => {
     if (localStorage.getItem("member")) {
       const role = localStorage.getItem("member_role");
@@ -43,6 +44,7 @@ class App extends React.Component {
               <Route path="/" exact render={() => <Login />} />
               <Route path="/hmportal" render={() => <HMPortal />} />
               <Route path="/hrportal" render={() => <HRPortal />} />
+              <Route path="/hrportal0" render={() => <HRPortal0 />} />
             </div>
             <div>
               <Footer />
