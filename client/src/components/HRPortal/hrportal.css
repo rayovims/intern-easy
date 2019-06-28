@@ -29,6 +29,6 @@
 
 .dropdown-content a:hover {background-color: #543713;}
 
-.dropdown:hover .dropdown-content {display: block;}
+/*.dropdown:hover .dropdown-content {display: block;}*/
 
 .dropdown:hover .dropbtn {background-color: #452d10;}

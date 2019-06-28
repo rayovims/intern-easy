@@ -5,6 +5,9 @@ import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import HMPortal from "../components/HMPortal/HMPortal";
 import HRPortal0 from "../components/HRPortal/HRPortal0";
+import HRPortal1 from "../components/HRPortal/HRPortal1";
+import HRPortal2 from "../components/HRPortal/HRPortal2";
+import HRPortal3 from "../components/HRPortal/HRPortal3";
 import HRPortal from "../components/HRPortal/HRPortal";
 import Login from "../components/login/Login";
 
@@ -45,6 +48,9 @@ class App extends React.Component {
               <Route path="/hmportal" render={() => <HMPortal />} />
               <Route path="/hrportal" render={() => <HRPortal />} />
               <Route path="/hrportal0" render={() => <HRPortal0 />} />
+              <Route path="/hrportal1" render={() => <HRPortal1 />} />
+              <Route path="/hrportal2" render={() => <HRPortal2 />} />
+              <Route path="/hrportal3" render={() => <HRPortal3 />} />
             </div>
             <div>
               <Footer />
